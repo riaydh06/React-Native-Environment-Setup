@@ -220,7 +220,7 @@
 
 
 
-# Create Certificate Signing Request
+## Create Certificate Signing Request
 
 1. Start by creating a .certSigningRequest (CSR) file on your Mac, using Keychain Access. Open Finder, and then open Keychain Access from the Utilities folder.
 
@@ -259,7 +259,7 @@ Now login to the Member Center on https://developer.apple.com/. Click Certificat
 
 11. Give your CSR a helpful descriptive name, such as iosapp.certSigningRequest, and choose a location to save it on your hard drive, then click Save.
 
-# Create an app ID for ios
+## Create an app ID for ios
 
 1. Navigate to the Apple Developer Member Center and sign in.
 2. Navigate to Certificates, Identifiers and Profiles.
@@ -270,15 +270,15 @@ Now login to the Member Center on https://developer.apple.com/. Click Certificat
    2. Input a Team ID. This value must match the Team ID in the Membership tab.
    3. In the App ID Suffix section, select Explicit App ID, then input your Bundle ID (e.g. com.google.samples.example). The value of the Bundle ID should match the value that you are using in your app's Info.plist and the value that you are using to get a configuration for FCM.   
    4. If any service need to active example(Push Notifications)  In the App Services section, make sure that Push Notifications is checked.   
-      6. Click Continue and check that your input is correct:
-      1. The value of Identifier should match the concatenation of the values of the Team ID and of the Bundle ID
-      2. Push Notifications should be Configurable
-      7. Click Register to create the App ID.
+6. Click Continue and check that your input is correct:
+   1. The value of Identifier should match the concatenation of the values of the Team ID and of the Bundle ID
+   2. Push Notifications should be Configurable
+7. Click Register to create the App ID.
 
 
 
 
-# Create a provisioning profile for ios
+## Create a provisioning profile for ios
 
     1. Navigate to the Apple Developer Member Center and sign in.
     2. Navigate to Certificates, Identifiers and Profiles.
@@ -292,37 +292,50 @@ Now login to the Member Center on https://developer.apple.com/. Click Certificat
     10. Click Download to save the Provisioning Profile to your Mac.
     11. Double-click the Provisioning Profile file to install it.
 
-# Generating Signed APK (Android) from “Console”
+## Generating Signed APK (Android) from “Console”
 
-Link for details.
-Generate keytool:
-      * On Windows:
+[Link](https://facebook.github.io/react-native/docs/signed-apk-android) for details.
+
+## Generate keytool:
+
+      ## * On Windows:
+      
 You can generate a private signing key using keytool. On Windows keytool must be run from C:\Program Files\Java\jdkx.x.x_x\bin.
+
+```bash
 $ keytool -genkeypair -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
-      * On Mac:
+```
+      ## * On Mac:
+      
 if you're not sure where your jdk bin folder is, then perform the following command to find it:
-$ /usr/libexec/java_home
-It will output the directory of the jdk, which will look something like this:
-$ /Library/Java/JavaVirtualMachines/jdkX.X.X_XXX.jdk/Contents/Home
-Navigate to the directory by using the command $ cd /your/jdk/path and use the keytool command with sudo permission as shown below.
-$ sudo keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
-Setting up gradle variables:
-      1. Place the my-release-key.keystore file under the android/app directory in your project folder.
-      2. Edit the file ~/.gradle/gradle.properties or android/gradle.properties, and add the following (replace ***** with the correct keystore password, alias and key password).
 
-
-MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
-MYAPP_RELEASE_KEY_ALIAS=my-key-alias
-MYAPP_RELEASE_STORE_PASSWORD=1234
-MYAPP_RELEASE_KEY_PASSWORD=1234
-
-
+	```bash
+	$ /usr/libexec/java_home
+	```
 	
+It will output the directory of the jdk, which will look something like this:
 
+```bash
+$ /Library/Java/JavaVirtualMachines/jdkX.X.X_XXX.jdk/Contents/Home
+```
 
+Navigate to the directory by using the command $ cd /your/jdk/path and use the keytool command with sudo permission as shown below.
 
+```bash
+$ sudo keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+```
 
+## Setting up gradle variables:
 
+      1. Place the my-release-key.keystore file under the android/app directory in your project folder.
+      2. Edit the file ~/.gradle/gradle.properties or android/gradle.properties, and add the following 
+      (replace ***** with the correct keystore password, alias and key password).
+
+	```bash
+	MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
+	MYAPP_RELEASE_KEY_ALIAS=my-key-alias
+	MYAPP_RELEASE_STORE_PASSWORD=1234
+	MYAPP_RELEASE_KEY_PASSWORD=1234
 
 
 Edit the file android/app/build.gradle in your project folder, and add the signing config,
