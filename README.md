@@ -332,10 +332,10 @@ $ sudo keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias 
       (replace ***** with the correct keystore password, alias and key password).
 
 
-	MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
-	MYAPP_RELEASE_KEY_ALIAS=my-key-alias
-	MYAPP_RELEASE_STORE_PASSWORD=1234
-	MYAPP_RELEASE_KEY_PASSWORD=1234
+		MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
+		MYAPP_RELEASE_KEY_ALIAS=my-key-alias
+		MYAPP_RELEASE_STORE_PASSWORD=1234
+		MYAPP_RELEASE_KEY_PASSWORD=1234
 
 
 ## Edit the file android/app/build.gradle in your project folder, and add the signing config,
