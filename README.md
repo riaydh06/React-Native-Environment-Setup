@@ -9,19 +9,41 @@
 ## Environment setup for React-Native  in Mac  
 1. Install JDK  [Link](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
    1. Open Terminal
-   2. Confirm you have JDK by typing “which java”. It should show something like /usr/bin/java.
-   3. Check you have the needed version of Java, by typing “java -version”.
+   2. Confirm you have JDK by typing
+   ```bash
+   which java
+   ```
+   It should show something like /usr/bin/java.
+   
+   3. Check you have the needed version of Java, by typing
+   ```bash
+   java -version
+   ```
+   
 2. Install Python 2 link (Only for window)
 3. Install Xcode 
 4. Install android studio link
-5. Install Homebrew (    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"   ) (For mac)
+5. Install Homebrew   
+
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"   
+```
+
 6. Install Node ( For install in window  go to this  link) 
+
+```bash
 $ brew update
 $ brew install node
 $ node -v
+```
+
 7. Install watchman (For mac)
+
+```bash
 $ brew update
 $ brew install watchman
+```
+
 8. Install eslint
 npm install -g eslint
 9. Android environment variable setup for  WINDOWS
