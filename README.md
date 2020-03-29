@@ -53,34 +53,28 @@
 
 ## Android environment variable setup for  WINDOWS
 
-	```bash
+	
 	JAVA_HOME = C:\Program FIles\Java\jdk
 	Path =C:\Users\AppData\Local\Android\sdk\platform-tools
 	ANDROID_HOME = c:\Users\YOUR_USERNAME\AppData\Local\Android\Sdk
-	```
+	
 
 ## Android environment variable setup  for MAC
 
    1. Open your Bash Profile with command below: 
    
-   	```bash
 	nano .bash_profile
-	```
 
    2. Edit .bash_profile with below paths: 
    
-   	```bash
  	export ANDROID_HOME=/Users/{Account}/Library/Android/sdk
 	export PATH=$ANDROID_HOME/platform-tools:$PATH
 	export PATH=$ANDROID_HOME/tools:$PATH
-	```
 	
         **PC: please check your Android sdk directory path is installed correctly.
    3. Save your Bash Profile with this buttons: 
    
-   	```bash
 	Ctl+o > Enter > ctl+x
-	```
 
 11. Install react-native-cli globally 
 npm install -g react-native-cli
