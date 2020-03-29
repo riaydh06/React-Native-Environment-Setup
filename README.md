@@ -30,7 +30,7 @@
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"   
 	```
 
-6. Install Node ( For install in window  go to this  [Link](https://nodejs.org/en/download/)) 
+6. Install Node ( For install go to this  [Link](https://nodejs.org/en/download/)) 
 
 	```bash
 	$ brew update
@@ -77,16 +77,31 @@
 	Ctl+o > Enter > ctl+x
 
 11. Install react-native-cli globally 
-npm install -g react-native-cli
-12. Create a new project 
-react-native  init project_name
+
+	```bash
+	npm install -g react-native-cli
+	```
+	
+12. Create a new project
+
+	```bash
+	react-native  init project_name
+	```
+
 13. Run your android project 
-react-native  run-android 
+
+	```bash
+	react-native  run-android 
+	```
 14. Run your ios project 
-react-native  run-ios 
+
+	```bash
+	react-native  run-ios 
+	```
 
 
-Environment setup for React-Native  in Ubuntu 18.04
+## Environment setup for React-Native  in Ubuntu 18.04
+
 1. sudo apt install openjdk-8-jdk
 2. java -version
 3. Set JAVA_HOME
