@@ -2,11 +2,14 @@
 
 
 ## Reinstall iMac 
+
 1. Press power button once and release.
 2. Hold “command + R” until the option menu comes .
 3. Goto Disk utility > select internal storage > press  erase > close the window 
 4. Select the reinstall menu > select internal storage > continue  
+
 ## Environment setup for React-Native  in Mac  
+
 1. Install JDK  [Link](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
    1. Open Terminal
    2. Confirm you have JDK by typing
@@ -102,115 +105,162 @@
 
 ## Environment setup for React-Native  in Ubuntu 18.04
 
-1. sudo apt install openjdk-8-jdk
-2. java -version
+1. Install JDK
+
+    ```bash
+    sudo apt install openjdk-8-jdk
+    ```
+
+2. Check Java Version
+
+    ```bash
+    java -version
+    ```
+
 3. Set JAVA_HOME
-   1. Check Java version: which java
-   2. Edit .bashrc by: gedit .bashrc
+
+   1. Check Java version: 
+
+        ```bash
+        which java
+        ```
+   
+   2. Edit .bashrc by: 
+   
+        ```bash
+        gedit .bashrc
+        ```
+   
    3. End of the bashrc file add
-      1. JAVA_HOME=/usr/lib/jvm/default-java/bin
-      2. export JAVA_HOME
-      3. PATH=$PATH:$JAVA_HOME
-      4. export PATH
-      5. Save and close the terminal
+
+        ```bash
+        JAVA_HOME=/usr/lib/jvm/default-java/bin
+        export JAVA_HOME
+        PATH=$PATH:$JAVA_HOME
+        export PATH
+
+        Save and close the terminal
+        ```
    4. echo $JAVA_HOME to check the home
-   5. Details on LInk
+
+        ```bash
+        echo $JAVA_HOME
+        ```
+   5. Details on [LInk](https://www.wikihow.com/Set-Up-Your-Java_Home-Path-in-Ubuntu)
+
 4. Download and install Android Studio
-   1. cd android-studio/bin
-   2. ./studio.sh
+
+    ```bash
+    cd android-studio/bin
+    ./studio.sh
+    ```
+
 5. Set the ANDROID_HOME environment variable
-   1. sudo gedit ~/.bashrc
-   2. export ANDROID_HOME=/home/user_directory/Android/Sdk
-   3. export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-   4. export JAVA_HOME=/usr/lib/jvm/java-8-oracle
-   5. echo $ANDROID_HOME to check
-   6. Details Link
-Setting up React Native in Ubuntu 18:
-1. Installing node Link
-2. sudo npm install -g react-native-cli
-3. react-native init ProjectName
-4. Cd Project
-5. react-native run-android
+
+    ```bash
+    sudo gedit ~/.bashrc
+    export ANDROID_HOME=/home/user_directory/Android/Sdk
+    export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+    export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+    echo $ANDROID_HOME #to check
+    ```
+    Details [Link](https://medium.com/@aashimad1/install-android-studio-in-ubuntu-b8aed675849f)
+
+## Setting up React Native in Ubuntu 18:
+
+1. Installing node [Link](https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/)
+
+2. Setting Project
+
+    ```bash
+    sudo npm install -g react-native-cli
+    react-native init ProjectName
+    cd Project
+    react-native run-android
+    ```
+
+## Command for MAC 
+
+    ```bash
+    1. /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    2. brew update
+    3. brew install node
+    4. node -v                                   # check node version 
+    5. brew install watchman
+    6. npm install -g react-native-cli
+    7. react-native init ‘project name’          # Create a new project 
+    8. react-native run-android                  # run android project 
+    9. react-native run-ios                      # run ios project 
+
+    # If Xcode not found then <Select “preference > Location > Command Line Tools > Xcode XX.X”> or Link
+
+    10. npm install -g eslint                    # install eslint 
+    11. npm install --save-dev eslint-config-rallycodding
+    12. adb devices                              # check running android device 
+    13. react-native run-ios --simulator="iPhone 4s"  # run a specific ios simulator 
+    14. adb shell input keyevent 82
+    15. adb reverse tcp:8081 tcp:8081
+    16. React-native start
+    17. react-native run-android --variant=release  # run a release build for android 
+    18. Update react-native 
+    npm install -g npm-check-updates 
+    ncu -u react-native 
+    npm install
+    19. In windows sdk.dir = C:\\Users\\USERNAME\\AppData\\Local\\Android\\sdk 
+    in macOS sdk.dir = /Users/USERNAME/Library/Android/sdk
+    in linux sdk.dir = /home/USERNAME/Android/Sdk
+    adding in android\local.properties for windows
+    14. ADB Android Device Unauthorized. When adb not found
+    * unplug device
+    * adb kill-server
+    * adb start-server
+    * plug device
+    ```
 
 
 
 
-Command for MAC 
+# Create Certificate Signing Request
 
-
-1. Homebrew Install: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-2. brew update
-3. brew install node
-4. node -v                                   // check node version 
-5. brew install watchman
-6. npm install -g react-native-cli
-7. react-native init ‘project name’          // Create a new project 
-8. react-native run-android                   // run android project 
-9. react-native run-ios                            // run ios project 
-   1. If Xcode not found then <Select “preference > Location > Command Line Tools > Xcode XX.X”> or Link
-10. npm install -g eslint                          // install eslint 
-11. npm install --save-dev eslint-config-rallycodding
-12. adb devices                                 // check running android device 
-13. react-native run-ios --simulator="iPhone 4s"  // run a specific ios simulator 
-14. adb shell input keyevent 82
-15. adb reverse tcp:8081 tcp:8081
-16. React-native start
-17. react-native run-android --variant=release  // run a release build for android 
-18. Update react-native 
-npm install -g npm-check-updates 
-ncu -u react-native 
-npm install
-19. In windows sdk.dir = C:\\Users\\USERNAME\\AppData\\Local\\Android\\sdk 
-in macOS sdk.dir = /Users/USERNAME/Library/Android/sdk
-in linux sdk.dir = /home/USERNAME/Android/Sdk
- adding in android\local.properties for windows
-   14. ADB Android Device Unauthorized. When adb not found
-* unplug device
-* adb kill-server
-* adb start-server
-* plug device
-
-
-
-
-Create Certificate Signing Request
-Start by creating a .certSigningRequest (CSR) file on your Mac, using Keychain Access. Open Finder, and then open Keychain Access from the Utilities folder.
+1. Start by creating a .certSigningRequest (CSR) file on your Mac, using Keychain Access. Open Finder, and then open Keychain Access from the Utilities folder.
 
 
  image 
 
-Next, open Keychain Access > Certificate Assistant > Request a Certificate From a Certificate Authority.
+2. open Keychain Access > Certificate Assistant > Request a Certificate From a Certificate Authority.
  image 
 
-Enter the email address that you use in your Apple developer account, and enter a common name. The common name can be anything you want, for example a helpful descriptive name like "ios-mybiz". Check Saved to disk and Let me specify key pair information, then click Continue.
+3. Enter the email address that you use in your Apple developer account, and enter a common name. The common name can be anything you want, for example a helpful descriptive name like "ios-mybiz". Check Saved to disk and Let me specify key pair information, then click Continue.
 Now login to the Member Center on https://developer.apple.com/. Click Certificates, Identifiers, & Profiles.
  image 
 
-Then click iOS Apps > Certificates.
+4. Then click iOS Apps > Certificates.
  image 
 
-Next, click the add button (the little plus sign) in the top right corner of the iOS Certificate page.
+5. Click the add button (the little plus sign) in the top right corner of the iOS Certificate page.
  image 
 
-Under "What type of certificate do you need?" check App Store and Ad Hoc, then click the Continue button at the bottom of the page.
+6. Under "What type of certificate do you need?" check App Store and Ad Hoc, then click the Continue button at the bottom of the page.
  image 
 
-The next screen, About Creating a Certificate Signing Request (CSR) has information about creating a CSR in Keychain Access. You already did this, so go to the next screen. "Add iOS Certificate", to upload the CSR you already created, then click the Generate button.
+7. The next screen, About Creating a Certificate Signing Request (CSR) has information about creating a CSR in Keychain Access. You already did this, so go to the next screen. "Add iOS Certificate", to upload the CSR you already created, then click the Generate button.
  image 
 
-Your new certificate is named ios_distribution.cer. Download it to your Mac; then find it and double-click on it to install it properly in Keychain.
+8. Your new certificate is named ios_distribution.cer. Download it to your Mac; then find it and double-click on it to install it properly in Keychain.
  image 
 
-After installing it, you should see it stored with its corresponding private key in Keychain.
+9. After installing it, you should see it stored with its corresponding private key in Keychain.
  image 
 
-Remember to make backups of your keys and certificates and keep them in a safe place.
+10. Remember to make backups of your keys and certificates and keep them in a safe place.
 
 
  image 
 
-Give your CSR a helpful descriptive name, such as iosapp.certSigningRequest, and choose a location to save it on your hard drive, then click Save.
-Create an app ID for ios
+11. Give your CSR a helpful descriptive name, such as iosapp.certSigningRequest, and choose a location to save it on your hard drive, then click Save.
+
+# Create an app ID for ios
+
 1. Navigate to the Apple Developer Member Center and sign in.
 2. Navigate to Certificates, Identifiers and Profiles.
 3. In the drop down menu on the top left corner, select iOS, tvOS, watchOS if it's not already selected, then navigate to Identifiers > App IDs.
@@ -228,21 +278,22 @@ Create an app ID for ios
 
 
 
-Create a provisioning profile for ios
-      1. Navigate to the Apple Developer Member Center and sign in.
-      2. Navigate to Certificates, Identifiers and Profiles.
-      3. In the drop down menu on the top left corner, select iOS, tvOS, watchOS if it's not already selected, then navigate to Provisioning Profiles > All.
-      4. Click the + button to create a new Provisioning Profile.
-      5. Select iOS App Development as provisioning profile type, then click Continue.
-      6. In the drop down menu, select the App ID you want to use, then click Continue.
-      7. Select the iOS Development certificate of the App ID you have chosen in the previous step, then click Continue.
-      8. Select the iOS devices that you want to include in the Provisioning Profile, then click Continue. Make sure to select all the devices you want to use for your testing.
-      9. Input a name for this provisioning profile (e.g. Firebase Sample App Development Profile), then click Generate.
-      10. Click Download to save the Provisioning Profile to your Mac.
-      11. Double-click the Provisioning Profile file to install it.
-________________
+# Create a provisioning profile for ios
 
-Generating Signed APK (Android) from “Console”
+    1. Navigate to the Apple Developer Member Center and sign in.
+    2. Navigate to Certificates, Identifiers and Profiles.
+    3. In the drop down menu on the top left corner, select iOS, tvOS, watchOS if it's not already selected, then navigate to Provisioning Profiles > All.
+    4. Click the + button to create a new Provisioning Profile.
+    5. Select iOS App Development as provisioning profile type, then click Continue.
+    6. In the drop down menu, select the App ID you want to use, then click Continue.
+    7. Select the iOS Development certificate of the App ID you have chosen in the previous step, then click Continue.
+    8. Select the iOS devices that you want to include in the Provisioning Profile, then click Continue. Make sure to select all the devices you want to use for your testing.
+    9. Input a name for this provisioning profile (e.g. Firebase Sample App Development Profile), then click Generate.
+    10. Click Download to save the Provisioning Profile to your Mac.
+    11. Double-click the Provisioning Profile file to install it.
+
+# Generating Signed APK (Android) from “Console”
+
 Link for details.
 Generate keytool:
       * On Windows:
@@ -301,20 +352,30 @@ android {
 ...
 	
 
-Generating the release APK:
+# Generating the release APK:
+
 Simply run the following in a terminal
+
+```bash
 $ cd android
 $ ./gradlew assembleRelease
+```
 
 
-Testing the release build of your app:
+# Testing the release build of your app:
+
+```bash
 $ react-native run-android --variant=release
-For optimization follow this Link.
-Find the apk:
+```
+
+# For optimization follow this [Link](https://facebook.github.io/react-native/docs/signed-apk-android#adding-signing-config-to-your-app-s-gradle-config).
+
+# Find the apk:
+
 YourApplication\app\build\outputs\apk
 
 
-IOS build configuration 
+# IOS build configuration 
       1. Download xcode. 
       2. Go to your project folder > ios 
       3. Double click .xcodeproj file . It will open by xcode 
@@ -337,7 +398,7 @@ IOS build configuration
 PC: check upper section for a,b & c
 
 
-Generating Release Build  for Testflight (IOS)
+# Generating Release Build  for Testflight (IOS)
       1.  Xcode > Product > Archive
       2. After appearing new screen 
       1. Validate App > next > next > Validate = success > close
