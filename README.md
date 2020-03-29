@@ -331,38 +331,38 @@ $ sudo keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias 
       2. Edit the file ~/.gradle/gradle.properties or android/gradle.properties, and add the following 
       (replace ***** with the correct keystore password, alias and key password).
 
-	```bash
+
 	MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
 	MYAPP_RELEASE_KEY_ALIAS=my-key-alias
 	MYAPP_RELEASE_STORE_PASSWORD=1234
 	MYAPP_RELEASE_KEY_PASSWORD=1234
 
 
-Edit the file android/app/build.gradle in your project folder, and add the signing config,
+## Edit the file android/app/build.gradle in your project folder, and add the signing config,
 
 
-...
-android {
-    ...
-    defaultConfig { ... }
-    signingConfigs {
-        release {
-            if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
-                storeFile file(MYAPP_RELEASE_STORE_FILE)
-                storePassword MYAPP_RELEASE_STORE_PASSWORD
-                keyAlias MYAPP_RELEASE_KEY_ALIAS
-                keyPassword MYAPP_RELEASE_KEY_PASSWORD
-            }
-        }
-    }
-    buildTypes {
-        release {
-            ...
-            signingConfig signingConfigs.release
-        }
-    }
-}
-...
+
+	android {
+	    ...
+	    defaultConfig { ... }
+	    signingConfigs {
+		release {
+		    if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+			storeFile file(MYAPP_RELEASE_STORE_FILE)
+			storePassword MYAPP_RELEASE_STORE_PASSWORD
+			keyAlias MYAPP_RELEASE_KEY_ALIAS
+			keyPassword MYAPP_RELEASE_KEY_PASSWORD
+		    }
+		}
+	    }
+	    buildTypes {
+		release {
+		    ...
+		    signingConfig signingConfigs.release
+		}
+	    }
+	}
+
 	
 
 # Generating the release APK:
