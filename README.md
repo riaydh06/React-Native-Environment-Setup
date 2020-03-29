@@ -1,13 +1,13 @@
-# Environment setup For Mac and window 
+# React Native Environment setup For Mac and window 
 
 
-Reinstall iMac 
+## Reinstall iMac 
 1. Press power button once and release.
 2. Hold “command + R” until the option menu comes .
 3. Goto Disk utility > select internal storage > press  erase > close the window 
 4. Select the reinstall menu > select internal storage > continue  
-Environment setup for React-Native  in Mac  
-1. Install JDK  link
+## Environment setup for React-Native  in Mac  
+1. Install JDK  [Link](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
    1. Open Terminal
    2. Confirm you have JDK by typing “which java”. It should show something like /usr/bin/java.
    3. Check you have the needed version of Java, by typing “java -version”.
