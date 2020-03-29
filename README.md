@@ -10,57 +10,77 @@
 1. Install JDK  [Link](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
    1. Open Terminal
    2. Confirm you have JDK by typing
-   ```bash
-   which java
-   ```
+   
+	   ```bash
+	   which java
+	   ```
    It should show something like /usr/bin/java.
    
    3. Check you have the needed version of Java, by typing
-   ```bash
-   java -version
-   ```
+	   ```bash
+	   java -version
+	   ```
    
 2. Install Python 2 link (Only for window)
 3. Install Xcode 
 4. Install android studio link
 5. Install Homebrew   
 
-```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"   
-```
+	```bash
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"   
+	```
 
-6. Install Node ( For install in window  go to this  link) 
+6. Install Node ( For install in window  go to this  [Link](https://nodejs.org/en/download/)) 
 
-```bash
-$ brew update
-$ brew install node
-$ node -v
-```
+	```bash
+	$ brew update
+	$ brew install node
+	$ node -v
+	```
 
-7. Install watchman (For mac)
+7. Install watchman
 
-```bash
-$ brew update
-$ brew install watchman
-```
+	```bash
+	$ brew update
+	$ brew install watchman
+	```
 
 8. Install eslint
-npm install -g eslint
-9. Android environment variable setup for  WINDOWS
-JAVA_HOME = C:\Program FIles\Java\jdk
-Path =C:\Users\AppData\Local\Android\sdk\platform-tools
-ANDROID_HOME = c:\Users\YOUR_USERNAME\AppData\Local\Android\Sdk
-10. Android environment variable setup  for MAC
+
+	```bash
+	npm install -g eslint
+	```
+
+## Android environment variable setup for  WINDOWS
+
+	```bash
+	JAVA_HOME = C:\Program FIles\Java\jdk
+	Path =C:\Users\AppData\Local\Android\sdk\platform-tools
+	ANDROID_HOME = c:\Users\YOUR_USERNAME\AppData\Local\Android\Sdk
+	```
+
+## Android environment variable setup  for MAC
+
    1. Open your Bash Profile with command below: 
-nano .bash_profile
+   
+   	```bash
+	nano .bash_profile
+	```
+
    2. Edit .bash_profile with below paths: 
- export ANDROID_HOME=/Users/{Account}/Library/Android/sdk
-export PATH=$ANDROID_HOME/platform-tools:$PATH
-export PATH=$ANDROID_HOME/tools:$PATH
+   
+   	```bash
+ 	export ANDROID_HOME=/Users/{Account}/Library/Android/sdk
+	export PATH=$ANDROID_HOME/platform-tools:$PATH
+	export PATH=$ANDROID_HOME/tools:$PATH
+	```
+	
         **PC: please check your Android sdk directory path is installed correctly.
    3. Save your Bash Profile with this buttons: 
-Ctl+o > Enter > ctl+x
-
+   
+   	```bash
+	Ctl+o > Enter > ctl+x
+	```
 
 11. Install react-native-cli globally 
 npm install -g react-native-cli
