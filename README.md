@@ -1,4 +1,4 @@
-Environment setup For Mac and window 
+# Environment setup For Mac and window 
 
 
 Reinstall iMac 
