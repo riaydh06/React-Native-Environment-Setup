@@ -1,4 +1,4 @@
-# React Native Environment setup For Mac, Ubuntu and window 
+# React Native Environment setup For Mac, Ubuntu and windows
 
 
 ## Reinstall iMac 
