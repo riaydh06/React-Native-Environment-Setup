@@ -101,7 +101,18 @@
 	```bash
 	react-native  run-ios 
 	```
+15. For ios 
 
+	```bash
+	cd ios 
+	pod install
+	```
+	
+	if pod not recognize 
+	
+	```bash
+	sudo gem install cocoapods
+	```
 
 ## Environment setup for React-Native  in Ubuntu 18.04
 
