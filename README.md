@@ -309,9 +309,7 @@ $ keytool -genkeypair -v -keystore my-release-key.keystore -alias my-key-alias -
       
 if you're not sure where your jdk bin folder is, then perform the following command to find it:
 
-	```bash
 	$ /usr/libexec/java_home
-	```
 	
 It will output the directory of the jdk, which will look something like this:
 
