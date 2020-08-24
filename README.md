@@ -76,8 +76,15 @@
 	
         **PC: please check your Android sdk directory path is installed correctly.
    3. Save your Bash Profile with this buttons: 
+	   ```bash
+	   Ctl+o > Enter > ctl+x
+	   ```
    
-	Ctl+o > Enter > ctl+x
+   4.run 
+   
+   	```bash
+   	source .bash_profile
+	```
 
 11. Install react-native-cli globally 
 
