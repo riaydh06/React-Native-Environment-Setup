@@ -80,7 +80,7 @@
    Ctl+o > Enter > ctl+x
    ```
    
-   4.run 
+   4.	Then run 
    
    	
    	source .bash_profile
